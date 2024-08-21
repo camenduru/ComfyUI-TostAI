@@ -29,10 +29,6 @@ class SendToTostAIWebhook:
         tost_image_pil = Image.fromarray(tost_image.astype(np.uint8))
         tost_image_pil.save(tost_file_path)
         response = requests.post(f"{webhook_url}/{webhook_key}", files={"file": open(tost_file_path, "rb")})
-        if response.status_code == 204:
-            print("Successfully uploaded file to TostAI.")
-        else:
-            print(f"Failed to upload file. Status code: {response.status_code}:{response.text}")
         return (f"{response.status_code}:{response.text}", )
 
 NODE_CLASS_MAPPINGS = {
