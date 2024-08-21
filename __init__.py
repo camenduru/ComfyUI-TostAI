@@ -32,7 +32,7 @@ class SendToTostAIWebhook:
             print("Successfully uploaded file to TostAI.")
         else:
             print(f"Failed to upload file. Status code: {response.status_code}:{response.text}")
-    return (f"{response.status_code}:{response.text}"", )
+    return (f"{response.status_code}:{response.text}", )
 
 NODE_CLASS_MAPPINGS = {
     "SendToTostAIWebhook": SendToTostAIWebhook,
