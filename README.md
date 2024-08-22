@@ -28,4 +28,5 @@ https://tost.ai
 - Run ComfyUI
 
 - To uninstall the tost service:
-  - Run `cloudflared.exe service uninstall`
+  - For Windows Run `cloudflared.exe service uninstall`
+  - For Linux & Mac Run `sudo cloudflared service uninstall`
